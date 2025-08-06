@@ -8,7 +8,7 @@ const DOC_TYPES = [
   { value: 'generic', label: 'Generic Document' }
 ];
 
-export default function FileUpload({ onResults, loading, setLoading, setError }) {  // Changed to accept loading prop
+export default function FileUpload({ onResults, loading, setLoading, setError }) {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [docType, setDocType] = useState('bill');
@@ -47,7 +47,7 @@ export default function FileUpload({ onResults, loading, setLoading, setError })
 
   return (
     <div className="upload-card">
-      <h3 className="upload-title">Upload Document</h3>
+      <h3 className="upload-title">Upload Your Document</h3>
       
       <div className="upload-grid">
         {/* Document Type Selection */}
@@ -57,7 +57,7 @@ export default function FileUpload({ onResults, loading, setLoading, setError })
             value={docType}
             onChange={(e) => setDocType(e.target.value)}
             className="form-control"
-            disabled={loading}  // Disable during processing
+            disabled={loading}
           >
             {DOC_TYPES.map((type) => (
               <option key={type.value} value={type.value}>
@@ -69,7 +69,7 @@ export default function FileUpload({ onResults, loading, setLoading, setError })
 
         {/* File Upload */}
         <div className="form-group">
-          <label className="form-label">Select File</label>
+          <label className="form-label">Select Document</label>
           <div className="file-upload-box">
             <label className="file-upload-label">
               <input
@@ -77,14 +77,19 @@ export default function FileUpload({ onResults, loading, setLoading, setError })
                 onChange={handleFileChange}
                 accept="image/*,.pdf"
                 className="file-input"
-                disabled={loading}  // Disable during processing
+                disabled={loading}
               />
               <span className="upload-text">
-                {file ? file.name : 'Click to browse'}
+                {file ? file.name : 'Click to browse or drag & drop'}
               </span>
               <span className="upload-icon">📁</span>
             </label>
           </div>
+          {file && (
+            <div className="file-info">
+              <small>Selected: {file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)</small>
+            </div>
+          )}
         </div>
 
         {/* Process Button */}
@@ -97,10 +102,10 @@ export default function FileUpload({ onResults, loading, setLoading, setError })
             {loading ? (
               <>
                 <span className="spinner"></span>
-                Processing...
+                Processing Document...
               </>
             ) : (
-              'Extract Text'
+              'Extract to Excel'
             )}
           </button>
         </div>

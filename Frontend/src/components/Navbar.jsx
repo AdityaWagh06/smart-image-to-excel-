@@ -1,22 +1,21 @@
-import { Link } from "react-router-dom";
+import React from 'react';
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-900 p-4 shadow-lg border-b-2 border-cyberpunk">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-cyberpunk">Cyberpunk OCR</h1>
-        <ul className="flex space-x-6">
-          <li>
-            <Link to="/" className="text-neon hover:text-cyberpunk transition">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="text-neon hover:text-cyberpunk transition">
-              About
-            </Link>
-          </li>
-        </ul>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-brand">
+          <div className="brand-logo">
+            <span className="logo-icon">🤖</span>
+            <span className="brand-text">Smart Image to Excel</span>
+          </div>
+        </div>
+        
+        <div className="navbar-menu">
+          <a href="#features" className="nav-link">Features</a>
+          <a href="#about" className="nav-link">About</a>
+          <a href="#contact" className="nav-link">Contact</a>
+        </div>
       </div>
     </nav>
   );

@@ -1,16 +1,19 @@
 import { useState } from 'react';
 import { exportToExcel } from '../services/api';
+import SuccessMessage from './SuccessMessage';
 
 export default function ResultsDisplay({ data }) {
   const [activeTab, setActiveTab] = useState('structured');
   const [isExporting, setIsExporting] = useState(false);
   const [exportError, setExportError] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleExport = async () => {
     try {
       setIsExporting(true);
       setExportError(null);
       await exportToExcel(data.structuredData, data.docType);
+      setShowSuccess(true);
     } catch (err) {
       setExportError(err.message);
       console.error('Export failed:', err);
@@ -28,9 +31,15 @@ export default function ResultsDisplay({ data }) {
           disabled={!data.structuredData || isExporting}
           className="export-button"
         >
-          {isExporting ? 'Exporting...' : 'Export to Excel'}
+          {isExporting ? 'Exporting...' : 'Download Excel File'}
         </button>
         {exportError && <div className="error-message">{exportError}</div>}
+        {showSuccess && (
+          <SuccessMessage 
+            message="Excel file downloaded successfully!" 
+            onClose={() => setShowSuccess(false)}
+          />
+        )}
       </div>
 
       <div className="tabs">
