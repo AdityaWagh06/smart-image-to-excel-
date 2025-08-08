@@ -1,10 +1,10 @@
-# Smart Image to Excel 🤖📊
+# Smart Image to Excel
 
 Transform your documents into structured Excel data with AI-powered OCR technology. Upload bills, invoices, receipts, or any document and get organized data ready for analysis.
 
 ![Smart Image to Excel Screenshot](Frontend/src/assets/home.png)
 
-## ✨ Features
+##  Features
 
 - **AI-Powered OCR**: Advanced text extraction from images and PDFs
 - **Multiple Document Types**: Support for bills, invoices, receipts, and generic documents
@@ -13,7 +13,7 @@ Transform your documents into structured Excel data with AI-powered OCR technolo
 - **Modern UI**: Clean, responsive design with intuitive user experience
 - **Fast Processing**: Quick document analysis and data extraction
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -67,7 +67,7 @@ Transform your documents into structured Excel data with AI-powered OCR technolo
 
 3. **Open your browser** and navigate to `http://localhost:5173`
 
-## 📖 Usage
+##  Usage
 
 1. **Upload Document**: Click "Upload Your Document" and select an image or PDF file
 2. **Select Document Type**: Choose the appropriate document type (Bill, Invoice, Receipt, or Generic)
@@ -75,7 +75,7 @@ Transform your documents into structured Excel data with AI-powered OCR technolo
 4. **Review Results**: View the extracted data in structured format or raw text
 5. **Export**: Click "Download Excel File" to export the data to Excel
 
-## 🛠️ Technology Stack
+## 🛠 Technology Stack
 
 ### Backend
 - **Python**: Core application logic
@@ -90,7 +90,7 @@ Transform your documents into structured Excel data with AI-powered OCR technolo
 - **Tailwind CSS**: Utility-first CSS framework
 - **Axios**: HTTP client for API communication
 
-## 🔧 Backend Architecture
+##  Backend Architecture
 
 ### API Endpoints
 
@@ -124,7 +124,7 @@ The backend provides two main endpoints:
 - **CORS Support**: Configured for frontend integration
 - **Environment Variables**: Secure API key management
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 smart-image-to-excel/
@@ -142,7 +142,7 @@ smart-image-to-excel/
 └── README.md               # This file
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Backend Configuration
 
@@ -169,7 +169,7 @@ The frontend API endpoint can be configured in `src/services/api.js`:
 const API_BASE_URL = 'http://localhost:8000';
 ```
 
-## 🚀 Deployment
+##  Deployment
 
 ### Backend Deployment
 
@@ -201,7 +201,7 @@ const API_BASE_URL = 'http://localhost:8000';
    # Upload the contents to your hosting provider
    ```
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -209,7 +209,7 @@ const API_BASE_URL = 'http://localhost:8000';
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -219,7 +219,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Powered by AI and OCR technology
 - Designed for productivity and ease of use
 
-## 📞 Support
+##  Support
 
 If you encounter any issues or have questions:
 
